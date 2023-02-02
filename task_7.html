@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Addition</h1>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button id="addButton">Add</button>
+
+    <script>
+        var input1 = document.getElementById("input1");
+        var input2 = document.getElementById("input2");
+        var addButton = document.getElementById("addButton");
+
+        addButton.addEventListener("click", function () {
+            try {
+                let a = parseInt(input1.value);
+                let b = parseInt(input2.value);
+                if (isNaN(a) || isNaN(b)) {
+                    throw "Error: Invalid Input";
+                }
+                let result = a + b;
+                alert("The result is: " + result);
+            } catch (error) {
+                alert(error);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

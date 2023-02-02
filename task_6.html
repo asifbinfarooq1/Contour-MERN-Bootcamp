@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>calculate the mean of array of items passed.</h1>
+    <script>
+        const mean = (numbers) => {
+            let sum = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                sum += numbers[i];
+            }
+            return sum / numbers.length;
+        };
+        let numbers = [1, 2, 3, 4, 5];
+        let result = mean(numbers);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

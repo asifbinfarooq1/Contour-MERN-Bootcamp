@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Use closures</h1>
+
+
+
+
+    <script>
+        function createBase(baseNumber) {
+            return function (numberToAdd) {
+                return baseNumber + numberToAdd;
+            };
+        }
+
+        const addSix = createBase(6);
+
+// You can then call addSix with a number, and it will return the sum of the number and baseNumber (6)
+
+    </script>
+</body>
+
+</html>
