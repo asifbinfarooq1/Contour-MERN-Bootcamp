@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Email Validation</h1>
+
+
+
+    <script>
+        function validatePersonalInfo(str) {
+            let regex = /^[A-Za-z0-9!#$%&'*+\-/=?^_`{|}~]+(\.[A-Za-z0-9!#$%&'*+\-/=?^_`{|}~]+)*$/;
+            return regex.test(str);
+        }
+        console.log(validatePersonalInfo("MuahmmadAsif02"));  //should be true
+
+        console.log(validatePersonalInfo("MuahmmadAsif"));  //should be true
+
+        console.log(validatePersonalInfo("Muahmmad Asif"));  //should be false
+
+        console.log(validatePersonalInfo(".MuahmmadAsif"));  //should be false
+
+        console.log(validatePersonalInfo("MuahmmadAsif."));  //should be false
+
+        console.log(validatePersonalInfo("Muahmmad..Asif")); //should be false
+
+    </script>
+</body>
+
+</html>
